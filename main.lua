@@ -1,9 +1,10 @@
 function love.load()
 -- other scripts
 inputs = require('OtherScripts/inputs')
--- load other scripts
+-- load other scripts   
 inputs.load()
-
+RightInput = false or inputs.right()
+LeftInput = false or 
 end
 
 function love.update(dt)

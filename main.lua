@@ -1,21 +1,23 @@
 function love.load()
 -- other scripts
-inputs = require('OtherScripts/inputs')
+
 -- load other scripts   
-inputs.load()
-RightInput = false or inputs.right()
-lovelytoasts = require('OtherScripts/LovelyToasts.lua')
-LeftInput = false or 
+
+lovelyToasts = require('OtherScripts/Library/LovelyToasts')
+
 end
 
 function love.update(dt)
-    inputs.right()
-    inputs.left()
-    inputs.space()
-    inputs.Fkey()
+   
+    lovelyToasts.update(dt)
+end
+function love.keypressed(key)
+    if key == 'p' then
+        lovelyToasts.show('testing',5)
+    end
 end
 
 function love.draw()
-character.draw()
-
+--character.draw()
+lovelyToasts.draw()
 end

@@ -1,14 +1,20 @@
+-- useful shi: love.graphics.rectangle(mode, x, y, width, height, rx, ry, segments)
+
+
 function love.load()
 -- other scripts
 
--- load other scripts   
 
+-- load other scripts   
+character = require('OtherScripts/character')
 lovelyToasts = require('OtherScripts/Library/LovelyToasts')
+
+character.load()
 
 end
 
 function love.update(dt)
-   
+    character.update(dt)
     lovelyToasts.update(dt)
 end
 function love.keypressed(key)
@@ -18,6 +24,6 @@ function love.keypressed(key)
 end
 
 function love.draw()
---character.draw()
+character.draw()
 lovelyToasts.draw()
 end

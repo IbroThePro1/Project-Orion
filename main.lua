@@ -8,17 +8,21 @@ function love.load()
 -- load other scripts   
 character = require('OtherScripts/character')
 lovelyToasts = require('OtherScripts/Library/LovelyToasts')
+MainMenu = require('OtherScripts/MainMenu')
 
 character.load()
+MainMenu.load()
 
 end
 
 function love.update(dt)
     character.update(dt)
     lovelyToasts.update(dt)
+
 end
 function love.keypressed(key)
     character.keypressed(key)
+    MainMenu.keypressed(key)
     if key == 'p' then
         lovelyToasts.show('testing',5)
     end

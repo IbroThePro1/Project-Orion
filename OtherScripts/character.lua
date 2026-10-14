@@ -25,7 +25,7 @@ function character.update(dt)
         character.y = character.y - character.speed * dt
     end
 end
-local function character.getdamge()
+function character.getdamge()
 
 
 end

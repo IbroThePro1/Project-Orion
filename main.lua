@@ -18,6 +18,7 @@ function love.update(dt)
     lovelyToasts.update(dt)
 end
 function love.keypressed(key)
+    character.keypressed(key)
     if key == 'p' then
         lovelyToasts.show('testing',5)
     end

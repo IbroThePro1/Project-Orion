@@ -17,9 +17,9 @@ local lovelyToasts = {
 		paddingTB = 10
 	},
 	options = {
-		tapToDismiss = false,
+		tapToDismiss = true,
 		queueEnabled = false,
-		animationDuration = 0.3
+		animationDuration = 0.2
 	}
 }
 

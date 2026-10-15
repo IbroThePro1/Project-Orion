@@ -4,7 +4,7 @@ function MainMenu.load()
     MainMenu.Background = {}
     MainMenu.Background.width = love.graphics.getWidth() 
     MainMenu.Background.height = love.graphics.getHeight()
-    MainMenu.Active = true
+    MainMenu.Active = false
 end
 
 function MainMenu.update(dt)

@@ -27,8 +27,13 @@ function character.update(dt)
 end
 function character.getdamage()
 character.attack = true
-lovelyToasts.show('your taking damage!', 2)
 Timer.after(0.1, function() character.attack = false end)
+
+    if character.attack == true then
+        lovelyToasts.show('you are getting attacked', 1)
+        NotificationDing:play()
+    end
+
 end
 function character.keypressed(key)
     if key == 'e' then

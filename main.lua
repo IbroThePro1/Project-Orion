@@ -2,14 +2,14 @@
 
 
 function love.load()
--- other scripts
-
-
+-- variable stuff
+RandomNumber = love.math.random(1, 100)
 -- load other scripts   
 character = require('OtherScripts/character')
 lovelyToasts = require('OtherScripts/Library/LovelyToasts')
 MainMenu = require('OtherScripts/MainMenu')
-
+Timer = require('OtherScripts/Library/timer')
+-- Use other scripts
 character.load()
 MainMenu.load()
 
@@ -18,7 +18,7 @@ end
 function love.update(dt)
     character.update(dt)
     lovelyToasts.update(dt)
-
+    Timer.update(dt)
 end
 function love.keypressed(key)
     character.keypressed(key)

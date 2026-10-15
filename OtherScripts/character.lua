@@ -25,12 +25,15 @@ function character.update(dt)
         character.y = character.y - character.speed * dt
     end
 end
-function character.getdamge()
-
-
+function character.getdamage()
+character.attack = true
+lovelyToasts.show('your taking damage!', 2)
+Timer.after(0.1, function() character.attack = false end)
 end
 function character.keypressed(key)
-    
+    if key == 'e' then
+        character.getdamage()
+    end
 end
 function character.draw() 
     if character.attack == true then

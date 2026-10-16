@@ -7,6 +7,12 @@ love.graphics.setDefaultFilter("nearest", "nearest")
 RandomNumber = love.math.random(1, 100)
 NotificationDing = love.audio.newSource('Assets/Other/Sounds/NotificationSound.mp3','static')
 GameFont = love.graphics.newFont('Assets/Other/Pixel.ttf')
+--save management stuff
+SaveTable = {}
+SaveTable.character.x = character.x
+SaveTable.character.y = character.y
+SaveTable.character.health = character.health
+SaveTable = Save.Load(SaveFile)
 -- load other scripts   
 character = require('OtherScripts/character')
 lovelyToasts = require('OtherScripts/Library/LovelyToasts')

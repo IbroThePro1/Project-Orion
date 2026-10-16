@@ -2,6 +2,7 @@ local character = {}
 function character.load()
     character.x = 30
     character.y = 45
+    character.health = 100
     character.width = love.graphics.getWidth() / 30
     character.height = love.graphics.getHeight() / 30
     character.speed = 300

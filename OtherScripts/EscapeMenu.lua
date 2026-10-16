@@ -29,8 +29,8 @@ function EscapeMenu.draw()
          love.graphics.setFont(GameFont)
         love.graphics.print(
            'Quit Game',
-            EscapeMenu.Dimension.x,
-            EscapeMenu.Dimension.y,
+            EscapeMenu.Dimension.x - EscapeMenu.Dimension.width /4 ,
+            EscapeMenu.Dimension.y + 100,
             nil,
             3,
             3

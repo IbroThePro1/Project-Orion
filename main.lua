@@ -7,6 +7,7 @@ love.graphics.setDefaultFilter("nearest", "nearest")
 RandomNumber = love.math.random(1, 100)
 NotificationDing = love.audio.newSource('Assets/Other/Sounds/NotificationSound.mp3','static')
 GameFont = love.graphics.newFont('Assets/Other/Pixel.ttf')
+CurrentSaveFile = 1
 --save management stuff
 SaveTable = {}
 SaveTable.character.x = character.x
@@ -30,6 +31,11 @@ function love.update(dt)
     lovelyToasts.update(dt)
     Timer.update(dt)
 end
+
+function love.quit()
+    local SaveFile = CurrentSaveFile
+    Save.Load(SaveFile)
+end
 function love.keypressed(key)
     character.keypressed(key)
     MainMenu.keypressed(key)
@@ -40,11 +46,11 @@ function love.keypressed(key)
 end
 
 function love.mousepressed(x, y, mouseButton)
-EscapeMenu.mousepressed(x, y, mouseButton)
+    EscapeMenu.mousepressed(x, y, mouseButton)
 end
 
 function love.draw()
-character.draw()
-lovelyToasts.draw()
-EscapeMenu.draw()
+    character.draw()
+    lovelyToasts.draw()
+    EscapeMenu.draw()
 end

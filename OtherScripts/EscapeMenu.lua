@@ -6,7 +6,10 @@ EscapeMenu.Dimension.width = love.graphics.getWidth() / 2
 EscapeMenu.Dimension.height = love.graphics.getHeight() /2
 EscapeMenu.Dimension.x = love.graphics.getWidth() / 2 
 EscapeMenu.Dimension.y = love.graphics.getHeight() /2 
-
+EscapeMenu.QuitButton.x = EscapeMenu.Dimension.x  - EscapeMenu.Dimension.width /4
+EscapeMenu.QuitButton.y = EscapeMenu.Dimension.y - EscapeMenu.Dimension.height /4
+EscapeMenu.QuitButton.width =
+EscapeMenu.QuitButton.height =
 end
 
 function EscapeMenu.keypressed(key)
@@ -42,4 +45,6 @@ end
 function EscapeMenu.mousepressed(x,y,mouseButton)
 
 end
+
+
 return EscapeMenu

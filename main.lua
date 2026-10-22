@@ -9,11 +9,11 @@ NotificationDing = love.audio.newSource('Assets/Other/Sounds/NotificationSound.m
 GameFont = love.graphics.newFont('Assets/Other/Pixel.ttf')
 CurrentSaveFile = 1
 --save management stuff
-SaveTable = {}
-SaveTable.character.x = character.x
-SaveTable.character.y = character.y
-SaveTable.character.health = character.health
-SaveTable = Save.Load(SaveFile)
+--SaveTable = {}
+--SaveTable.character.x = character.x
+--SaveTable.character.y = character.y
+--SaveTable.character.health = character.health
+--SaveTable = Save.Load(SaveFile)
 -- load other scripts   
 character = require('OtherScripts/character')
 lovelyToasts = require('OtherScripts/Library/LovelyToasts')

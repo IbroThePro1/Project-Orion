@@ -1,6 +1,6 @@
 -- useful shi: love.graphics.rectangle(mode, x, y, width, height, rx, ry, segments)
 
-
+-- Jarvis, Initiate Project orion
 function love.load()
 -- misc variables
 love.graphics.setDefaultFilter("nearest", "nearest")
@@ -20,6 +20,8 @@ lovelyToasts = require('OtherScripts/Library/LovelyToasts')
 MainMenu = require('OtherScripts/MainMenu')
 Timer = require('OtherScripts/Library/timer')
 EscapeMenu = require('OtherScripts/EscapeMenu')
+--collision = require('OtherScripts/')
+resources = require('OtherScripts/resources')
 -- Use other scripts
 character.load()
 MainMenu.load()

@@ -2,8 +2,8 @@ local MainMenu = {}
 
 function MainMenu.load()
     MainMenu.Background = {}
-    MainMenu.Background.width = love.graphics.getWidth() 
-    MainMenu.Background.height = love.graphics.getHeight()
+    MainMenu.Button = {}
+    MainMenu.Button.Image = love.graphics.newImage('Assets/Images/Startbutton_Project_Orion.png')
     MainMenu.Active = false
 end
 
@@ -15,11 +15,8 @@ function MainMenu.keypressed(key)
     if MainMenu.Active == true then 
         if key == 'esc' then
             love.event.quit()
-        end
-        
+        end 
     end
-
-
 end
 function MainMenu.draw()
 
